@@ -352,6 +352,65 @@ footer ul li a:hover {
   color: #aaa;
 }
 
+/* Inner pages */
+
+.bg-falcon-9 {
+  background-image: url("../img/falcon-9.webp");
+}
+.bg-falcon-heavy {
+  background-image: url("../img/falcon-heavy.webp");
+}
+.bg-dragon {
+  background-image: url("../img/dragon.webp");
+}
+
+.section-animate {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.section-inner-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+  width: 80%;
+}
+
+.section-inner-center h3 {
+  font-size: 10rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.section-inner-center p {
+  font-size: 2rem;
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
+
+/* Stats */
+
+.stats {
+  max-width: 96rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stats div span {
+  font-size: 16rem;
+}
+
+.stats div h4 {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
 /* Animations */
 
 @keyframes fadeInUp {
@@ -363,6 +422,16 @@ footer ul li a:hover {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -399,6 +468,10 @@ footer ul li a:hover {
   .mobile-only {
     display: block;
   }
+
+  .section-inner-center h3 {
+    font-size: 7.5rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -425,5 +498,18 @@ footer ul li a:hover {
   .logo {
     width: 15rem;
     margin: auto;
+  }
+
+  .section-inner-center h3 {
+    font-size: 5rem;
+  }
+
+  /* Stats */
+
+  .stats {
+    flex-direction: column;
+  }
+  .stats div {
+    margin-bottom: 2rem;
   }
 }
